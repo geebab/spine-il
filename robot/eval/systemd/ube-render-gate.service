@@ -1,0 +1,14 @@
+[Unit]
+Description=Render work gives way to the robot (robot/eval/render_gate.py watch)
+
+[Service]
+Type=simple
+ExecStart=%h/il-robot/.venv/bin/python -u %h/spine-il/robot/eval/render_gate.py watch
+Restart=always
+RestartSec=2
+# stopped with a plain SIGTERM: the watcher then continues what it stopped and removes the pause file
+KillMode=process
+TimeoutStopSec=10
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>spinearm_description</name>
+  <version>0.1.0</version>
+  <description>SO-101 visual meshes (TheRobotStudio, Apache-2.0) and the slot for the tracker-marker blocks; the robot
+    model itself is assembled at launch from calibration (spinearm_bridge.visual_urdf).</description>
+  <maintainer email="90886911+geebab@users.noreply.github.com">Donghyun Won</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

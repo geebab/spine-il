@@ -1,0 +1,33 @@
+[project]
+name = "lerobot_robot_spinearm"
+version = "0.1.0"
+description = "SO-101 arm server (owns the serial bus, one lease at a time, safety state machine, kinematic sim) and the LeRobot proxy robot plugin that talks to it."
+readme = "README.md"
+license = "MPL-2.0"
+requires-python = ">=3.12"
+dependencies = [
+  "lerobot>=0.6.1,<0.7",
+  "pyzmq>=25",
+  "numpy>=2.0",
+]
+
+[project.optional-dependencies]
+server = ["lerobot[feetech]>=0.6.1,<0.7"]
+ee = ["lerobot[kinematics]>=0.6.1,<0.7"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+spine-arm-server = "lerobot_robot_spinearm.server.main:main"
+spine-arm-ctl = "lerobot_robot_spinearm.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# The distribution name must keep the `lerobot_robot_` prefix verbatim: LeRobot's
+# register_third_party_plugins() imports installed distributions by that exact name.
+[tool.hatch.build.targets.wheel]
+packages = ["lerobot_robot_spinearm"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,202 @@
+{
+ "91cb": {
+  "episode": 0,
+  "window_from_s": 15,
+  "depth_mm": {
+   "endo": 29.9,
+   "drill": 48.4
+  },
+  "out_max_mm": 44.5,
+  "reached_max": false,
+  "why": "right faces 40° off the camera",
+  "travel_mm": {
+   "endo": 79.4,
+   "drill": 92.8
+  },
+  "human_ready": {
+   "endo": {
+    "tip_mm": 74.8,
+    "shaft_deg": 10.0
+   },
+   "drill": {
+    "tip_mm": 68.0,
+    "shaft_deg": 11.9
+   }
+  }
+ },
+ "0338": {
+  "episode": 1,
+  "window_from_s": 18,
+  "depth_mm": {
+   "endo": 29.2,
+   "drill": 47.8
+  },
+  "out_max_mm": 48.1,
+  "reached_max": false,
+  "why": "right faces 40° off the camera",
+  "travel_mm": {
+   "endo": 81.9,
+   "drill": 95.8
+  },
+  "human_ready": {
+   "endo": {
+    "tip_mm": 162.0,
+    "shaft_deg": 14.0
+   },
+   "drill": {
+    "tip_mm": 241.4,
+    "shaft_deg": 30.7
+   }
+  }
+ },
+ "6639": {
+  "episode": 2,
+  "window_from_s": 14,
+  "depth_mm": {
+   "endo": 25.2,
+   "drill": 46.0
+  },
+  "out_max_mm": 54.0,
+  "reached_max": false,
+  "why": "right faces 40° off the camera",
+  "travel_mm": {
+   "endo": 83.5,
+   "drill": 100.0
+  },
+  "human_ready": {
+   "endo": {
+    "tip_mm": 69.7,
+    "shaft_deg": 15.5
+   },
+   "drill": {
+    "tip_mm": 70.3,
+    "shaft_deg": 11.4
+   }
+  }
+ },
+ "919d": {
+  "episode": 3,
+  "window_from_s": 10,
+  "depth_mm": {
+   "endo": 24.3,
+   "drill": 47.4
+  },
+  "out_max_mm": 44.2,
+  "reached_max": false,
+  "why": "right faces 40° off the camera",
+  "travel_mm": {
+   "endo": 75.0,
+   "drill": 91.6
+  },
+  "human_ready": {
+   "endo": {
+    "tip_mm": 72.0,
+    "shaft_deg": 13.2
+   },
+   "drill": {
+    "tip_mm": 69.2,
+    "shaft_deg": 12.6
+   }
+  }
+ },
+ "bad1": {
+  "episode": 4,
+  "window_from_s": 12,
+  "depth_mm": {
+   "endo": 30.5,
+   "drill": 50.8
+  },
+  "out_max_mm": 44.3,
+  "reached_max": false,
+  "why": "right faces 40° off the camera",
+  "travel_mm": {
+   "endo": 80.3,
+   "drill": 95.1
+  },
+  "human_ready": {
+   "endo": {
+    "tip_mm": 70.5,
+    "shaft_deg": 11.4
+   },
+   "drill": {
+    "tip_mm": 62.1,
+    "shaft_deg": 4.1
+   }
+  }
+ },
+ "d340": {
+  "episode": 5,
+  "window_from_s": 27,
+  "depth_mm": {
+   "endo": 31.8,
+   "drill": 51.3
+  },
+  "out_max_mm": 54.1,
+  "reached_max": false,
+  "why": "right faces 40° off the camera",
+  "travel_mm": {
+   "endo": 89.8,
+   "drill": 105.5
+  },
+  "human_ready": {
+   "endo": {
+    "tip_mm": 72.7,
+    "shaft_deg": 12.0
+   },
+   "drill": {
+    "tip_mm": 72.0,
+    "shaft_deg": 7.2
+   }
+  }
+ },
+ "3868": {
+  "episode": 6,
+  "window_from_s": 17,
+  "depth_mm": {
+   "endo": 31.5,
+   "drill": 54.8
+  },
+  "out_max_mm": 50.3,
+  "reached_max": false,
+  "why": "right faces 40° off the camera",
+  "travel_mm": {
+   "endo": 86.9,
+   "drill": 105.1
+  },
+  "human_ready": {
+   "endo": {
+    "tip_mm": 69.2,
+    "shaft_deg": 14.9
+   },
+   "drill": {
+    "tip_mm": 63.9,
+    "shaft_deg": 4.8
+   }
+  }
+ },
+ "bef5": {
+  "episode": 7,
+  "window_from_s": 17,
+  "depth_mm": {
+   "endo": 33.9,
+   "drill": 51.1
+  },
+  "out_max_mm": 46.2,
+  "reached_max": false,
+  "why": "left IK 0.0 mm / 10.0°; right faces 40° off the camera",
+  "travel_mm": {
+   "endo": 84.6,
+   "drill": 97.3
+  },
+  "human_ready": {
+   "endo": {
+    "tip_mm": 72.9,
+    "shaft_deg": 17.9
+   },
+   "drill": {
+    "tip_mm": 63.6,
+    "shaft_deg": 9.4
+   }
+  }
+ }
+}

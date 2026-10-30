@@ -1,0 +1,3 @@
+urdf/so101_new_calib.urdf and meshes/so101/*.stl are from TheRobotStudio SO-ARM100
+(https://github.com/TheRobotStudio/SO-ARM100, Simulation/SO101), Apache License 2.0, unmodified.
+meshes/markers/ holds private tracker-marker blocks copied in at build time; they are not part of this repository.

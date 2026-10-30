@@ -1,0 +1,21 @@
+{
+  "_comment": "How the dataset's flat state and action map onto YOUR GR00T modality keys — replace the key names with those of your meta/modality.json; the index ranges are fixed by the dataset. This example is for the progress dataset (state 16 = 15 + pad.zero, action 16 = 15 + drill.progress); for the dataset without that output drop state.pad and action.progress.",
+  "video": "video.endo",
+  "language": "annotation.human.task_description",
+  "state": {
+    "state.endo_pos": [0, 3],
+    "state.endo_quat": [3, 7],
+    "state.drill_pos": [7, 10],
+    "state.drill_quat": [10, 14],
+    "state.trigger": [14, 15],
+    "state.pad": [15, 16]
+  },
+  "action": {
+    "action.endo_pos": [0, 3],
+    "action.endo_quat": [3, 7],
+    "action.drill_pos": [7, 10],
+    "action.drill_quat": [10, 14],
+    "action.trigger": [14, 15],
+    "action.progress": [15, 16]
+  }
+}

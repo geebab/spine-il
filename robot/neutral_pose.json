@@ -1,0 +1,21 @@
+{
+  "_note": "중립 자세(관절 °, 6번 포함). 팔 서버의 home 명령이 여기로 복귀한다.",
+  "_recorded": "2026-09-20",
+  "spine_left": {
+    "shoulder_pan": 3.56,
+    "shoulder_lift": -101.85,
+    "elbow_flex": 59.43,
+    "wrist_flex": 99.52,
+    "wrist_roll": 1.89,
+    "gripper": -60.66
+  },
+  "spine_right": {
+    "shoulder_pan": 1.41,
+    "shoulder_lift": -101.41,
+    "elbow_flex": 59.69,
+    "wrist_flex": 102.24,
+    "wrist_roll": -1.54,
+    "gripper": -64.31
+  },
+  "_units": "deg"
+}

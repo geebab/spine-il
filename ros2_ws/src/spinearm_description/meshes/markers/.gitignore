@@ -1,0 +1,3 @@
+# Tracker marker blocks are private designs — copied in by setup/61-ros2-build.sh from ~/il-robot/viewer-data/stl/,
+# never committed.
+*.stl

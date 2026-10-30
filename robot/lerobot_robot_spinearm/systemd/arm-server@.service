@@ -1,0 +1,28 @@
+# systemd --user template: arm-server@left / arm-server@right (runs as the owner, owner1).
+# Install with systemd/install-arm-server.sh — it substitutes the venv path and log dir.
+[Unit]
+Description=SO-101 arm server (%i)
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+ExecStart=__VENV__/bin/spine-arm-server --arm %i --port /dev/so101_%i --id spine_%i --neutral __REPO__/robot/neutral_pose.json __LOGARG__
+Restart=always
+RestartSec=3
+# SIGINT → hold in place and keep torque (never drop a raised arm)
+KillSignal=SIGINT
+TimeoutStopSec=8
+# Hardening (same set as ube-camera.service). The serial port is a device node → no PrivateDevices.
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectHome=read-only
+__READWRITE__
+ProtectSystem=strict
+ProtectKernelTunables=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+UMask=0027
+
+[Install]
+WantedBy=default.target

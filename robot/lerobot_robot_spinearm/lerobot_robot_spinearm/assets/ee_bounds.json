@@ -1,0 +1,65 @@
+{
+  "frame": "gripper_frame_link, base_link 기준, mm",
+  "source": "so101_new_calib.urdf FK × (캘리브레이션 ∩ URDF) 관절한계, 무작위 60k 샘플 (2026-09-17)",
+  "joint_limits_deg": {
+    "shoulder_pan": [
+      -110,
+      110
+    ],
+    "shoulder_lift": [
+      -100,
+      100
+    ],
+    "elbow_flex": [
+      -97,
+      97
+    ],
+    "wrist_flex": [
+      -95,
+      95
+    ],
+    "wrist_roll": [
+      -157,
+      163
+    ]
+  },
+  "reach_envelope_mm": {
+    "x": [
+      -338.8,
+      478.2
+    ],
+    "y": [
+      -440.5,
+      439.8
+    ],
+    "z": [
+      -224.3,
+      526.8
+    ],
+    "max_horizontal": 479.2
+  },
+  "above_table_p1_p99_mm": {
+    "x": [
+      -255.7,
+      424.3
+    ],
+    "y": [
+      -388.0,
+      387.8
+    ],
+    "z": [
+      4.3,
+      516.2
+    ],
+    "max_horizontal": 453
+  },
+  "gravity_torque_arm_only": {
+    "median_pct_stall": 14,
+    "p90_pct_stall": 25,
+    "max_pct_stall": 29,
+    "max_Nm": 0.85,
+    "stall_Nm": 2.94,
+    "rated_Nm": 0.98,
+    "note": "Torque_Limit 40%일 때 과부하 보호 문턱 ≈ 32% → 중력만으로 근접. 100% 권장"
+  }
+}

@@ -1,0 +1,33 @@
+# spine-policy/1 server (GR00T N1.7 fine-tuned with LeRobot 0.6.1) for a Nebius Serverless Endpoint — public-repo ready:
+# no viewer, no data, no weights inside. The checkpoint comes from a mounted volume (/ckpt) at run time.
+#
+#   build context: a folder with policy_server.py remote_policy.py actions.py phases.py instructions.py
+#                  (robot/inference/remote/make_bundle.sh's flat bundle, or ~/il-robot/server on the GPU VM)
+#   docker build -f Dockerfile.policy -t spine-policy:h90g ctx/policy
+#   run:  -e POLICY_TOKEN=<secret> (or POLICY_TOKEN_FILE) -v <bucket>:/ckpt:ro -p 8900:8900 --gpus all
+# Plain Ubuntu, not nvidia/cuda: torch's cu130 wheels carry their own CUDA libraries, and an nvidia/cuda:13.1 base would
+# refuse to start on a 580 driver (the Nebius RTX PRO 6000 VM has 580.173 = CUDA 13.0). The runtime mounts the driver.
+FROM ubuntu:24.04
+
+ENV DEBIAN_FRONTEND=noninteractive PYTHONUNBUFFERED=1 UV_PYTHON_INSTALL_DIR=/opt/uv-python \
+    LEROBOT_VERSION=0.6.1 NVIDIA_VISIBLE_DEVICES=all NVIDIA_DRIVER_CAPABILITIES=compute,utility
+RUN apt-get update -qq && apt-get install -y -qq --no-install-recommends ca-certificates curl ffmpeg git \
+    && rm -rf /var/lib/apt/lists/*
+RUN curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR=/usr/local/bin UV_NO_MODIFY_PATH=1 sh
+
+# the same environment robot/train/nebius/vm_setup.sh builds on the VM (lerobot[groot,training]==0.6.1, Python 3.12;
+# torch comes with it — 2.11 cu130 on the VM). No flash-attn: LeRobot falls back to SDPA.
+RUN uv python install 3.12 && uv venv --python 3.12 --seed /opt/venv-policy \
+    && uv pip install --python /opt/venv-policy/bin/python "lerobot[groot,training]==${LEROBOT_VERSION}" pyarrow \
+    && /opt/venv-policy/bin/python -c "import importlib.metadata as m, torch; print('lerobot', m.version('lerobot'), 'torch', torch.__version__)"
+
+WORKDIR /opt/server
+COPY policy_server.py remote_policy.py actions.py phases.py instructions.py /opt/server/
+COPY policy_entry.sh /usr/local/bin/policy_entry.sh
+RUN chmod 755 /usr/local/bin/policy_entry.sh && /opt/venv-policy/bin/python -m py_compile /opt/server/*.py
+
+# /ckpt/pretrained_model = the checkpoint's pretrained_model folder (H90g step 020000);
+# /ckpt/export.json = the training dataset's meta/spine_il/export.json (its instruction set), optional
+ENV POLICY_PATH=/ckpt/pretrained_model POLICY_INSTRUCTIONS=/ckpt/export.json POLICY_PORT=8900
+EXPOSE 8900
+CMD ["/usr/local/bin/policy_entry.sh"]

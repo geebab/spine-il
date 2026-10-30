@@ -1,0 +1,71 @@
+{
+ "bad1": {
+  "episode": 4,
+  "anchor_s": 7.533,
+  "frames": 1055,
+  "span_s": [
+   0.13,
+   67.33
+  ],
+  "stops": {
+   "start": "",
+   "end": "right IK 0.0 mm / 18.2°"
+  },
+  "rule_s": [
+   7.53,
+   64.47
+  ],
+  "rule_ok": true,
+  "entry_out_mm": 20.0,
+  "entry_why": "",
+  "entry_ok": true,
+  "exit_ok": true,
+  "exit_why": ""
+ },
+ "d340": {
+  "episode": 5,
+  "anchor_s": 22.0,
+  "frames": 1610,
+  "span_s": [
+   1.8,
+   103.6
+  ],
+  "stops": {
+   "start": "right IK 0.0 mm / 18.4°",
+   "end": "right IK 0.0 mm / 17.6°"
+  },
+  "rule_s": [
+   22.0,
+   103.27
+  ],
+  "rule_ok": true,
+  "entry_out_mm": 20.0,
+  "entry_why": "",
+  "entry_ok": true,
+  "exit_ok": true,
+  "exit_why": ""
+ },
+ "bef5": {
+  "episode": 7,
+  "anchor_s": 12.267,
+  "frames": 2117,
+  "span_s": [
+   0.07,
+   137.67
+  ],
+  "stops": {
+   "start": "",
+   "end": "left IK 0.0 mm / 17.8°"
+  },
+  "rule_s": [
+   12.27,
+   136.6
+  ],
+  "rule_ok": true,
+  "entry_out_mm": 20.0,
+  "entry_why": "",
+  "entry_ok": true,
+  "exit_ok": true,
+  "exit_why": ""
+ }
+}

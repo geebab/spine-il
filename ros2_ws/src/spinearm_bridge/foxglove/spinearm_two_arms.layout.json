@@ -1,0 +1,201 @@
+{
+ "configById": {
+  "3D!spinearm": {
+   "cameraState": {
+    "distance": 0.75,
+    "perspective": true,
+    "phi": 58,
+    "target": [
+     0,
+     0,
+     0
+    ],
+    "targetOffset": [
+     0.1,
+     -0.07,
+     0.1
+    ],
+    "targetOrientation": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "thetaOffset": -20,
+    "fovy": 45,
+    "near": 0.01,
+    "far": 50
+   },
+   "followMode": "follow-pose",
+   "followTf": "left_base_link",
+   "scene": {
+    "labelScaleFactor": 0.4,
+    "backgroundColor": "#15171c",
+    "transforms": {
+     "showLabel": false,
+     "axisScale": 0.25,
+     "lineWidth": 1,
+     "editable": false
+    },
+    "meshUpAxis": "z_up"
+   },
+   "transforms": {
+    "frame:left_shoulder_link": {
+     "visible": false
+    },
+    "frame:left_upper_arm_link": {
+     "visible": false
+    },
+    "frame:left_lower_arm_link": {
+     "visible": false
+    },
+    "frame:left_wrist_link": {
+     "visible": false
+    },
+    "frame:left_gripper_link": {
+     "visible": false
+    },
+    "frame:left_gripper_frame_link": {
+     "visible": false
+    },
+    "frame:left_moving_jaw_so101_v1_link": {
+     "visible": false
+    },
+    "frame:left_marker_frame_link": {
+     "visible": false
+    },
+    "frame:left_endo_tip": {
+     "visible": false
+    },
+    "frame:left_endo_marker": {
+     "visible": false
+    },
+    "frame:right_shoulder_link": {
+     "visible": false
+    },
+    "frame:right_upper_arm_link": {
+     "visible": false
+    },
+    "frame:right_lower_arm_link": {
+     "visible": false
+    },
+    "frame:right_wrist_link": {
+     "visible": false
+    },
+    "frame:right_gripper_link": {
+     "visible": false
+    },
+    "frame:right_gripper_frame_link": {
+     "visible": false
+    },
+    "frame:right_moving_jaw_so101_v1_link": {
+     "visible": false
+    },
+    "frame:right_marker_frame_link": {
+     "visible": false
+    },
+    "frame:right_endo_tip": {
+     "visible": false
+    },
+    "frame:right_endo_marker": {
+     "visible": false
+    },
+    "frame:tracker_cam": {
+     "visible": true
+    },
+    "frame:left_base_link": {
+     "visible": true
+    },
+    "frame:right_base_link": {
+     "visible": true
+    }
+   },
+   "topics": {
+    "/tracker/endo/pose": {
+     "visible": false
+    },
+    "/tracker/endo2/pose": {
+     "visible": false
+    },
+    "/tracker/drill/pose": {
+     "visible": false
+    },
+    "/tracker/balls": {
+     "visible": true
+    }
+   },
+   "layers": {
+    "grid": {
+     "layerId": "foxglove.Grid",
+     "instanceId": "grid",
+     "label": "Grid",
+     "visible": true,
+     "order": 0,
+     "frameId": "left_base_link",
+     "size": 1,
+     "divisions": 20,
+     "lineWidth": 1,
+     "color": "#3a4a6688",
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    "urdf-left": {
+     "layerId": "foxglove.Urdf",
+     "instanceId": "urdf-left",
+     "label": "left arm",
+     "visible": true,
+     "frameLocked": true,
+     "sourceType": "topic",
+     "topic": "/left/robot_description",
+     "url": "",
+     "filePath": "",
+     "parameter": "",
+     "framePrefix": "",
+     "displayMode": "visual",
+     "fallbackColor": "#ffffff",
+     "order": 1
+    },
+    "urdf-right": {
+     "layerId": "foxglove.Urdf",
+     "instanceId": "urdf-right",
+     "label": "right arm",
+     "visible": true,
+     "frameLocked": true,
+     "sourceType": "topic",
+     "topic": "/right/robot_description",
+     "url": "",
+     "filePath": "",
+     "parameter": "",
+     "framePrefix": "",
+     "displayMode": "visual",
+     "fallbackColor": "#ffffff",
+     "order": 2
+    }
+   },
+   "publish": {
+    "type": "point",
+    "poseTopic": "/move_base_simple/goal",
+    "pointTopic": "/clicked_point",
+    "poseEstimateTopic": "/initialpose",
+    "poseEstimateXDeviation": 0.5,
+    "poseEstimateYDeviation": 0.5,
+    "poseEstimateThetaDeviation": 0.26179939
+   },
+   "imageMode": {}
+  }
+ },
+ "globalVariables": {},
+ "userNodes": {},
+ "playbackConfig": {
+  "speed": 1
+ },
+ "layout": "3D!spinearm"
+}

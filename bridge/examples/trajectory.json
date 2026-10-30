@@ -1,0 +1,102 @@
+{
+ "format": "spine-render-trajectory",
+ "version": 1,
+ "case": "altician_lumbar1",
+ "feed_hz": 90,
+ "_comment": "Scene LPS mm. Endoscope advances 10 mm along its shaft while rolling +20\u00b0, then the drill trigger is pressed for 1 s.",
+ "frames": [
+  {
+   "t": 0.0,
+   "endo": {
+    "tip": [
+     44.26,
+     78.32,
+     1075.58
+    ],
+    "u": [
+     -0.6782,
+     -0.717,
+     -0.1613
+    ],
+    "roll": 102.1
+   },
+   "drill": {
+    "tip": [
+     37.76,
+     93.19,
+     974.73
+    ],
+    "u": [
+     -0.476,
+     -0.303,
+     0.8256
+    ],
+    "roll": 92.9,
+    "trig": false
+   }
+  },
+  {
+   "t": 1.0,
+   "endo": {
+    "tip": [
+     37.48,
+     71.15,
+     1073.97
+    ],
+    "u": [
+     -0.6782,
+     -0.717,
+     -0.1613
+    ],
+    "roll": 122.1
+   }
+  },
+  {
+   "t": 1.5,
+   "drill": {
+    "tip": [
+     37.76,
+     93.19,
+     974.73
+    ],
+    "u": [
+     -0.476,
+     -0.303,
+     0.8256
+    ],
+    "roll": 92.9,
+    "trig": true
+   }
+  },
+  {
+   "t": 2.5,
+   "drill": {
+    "tip": [
+     37.76,
+     93.19,
+     974.73
+    ],
+    "u": [
+     -0.476,
+     -0.303,
+     0.8256
+    ],
+    "roll": 92.9,
+    "trig": false
+   },
+   "endo": {
+    "tip": [
+     37.48,
+     71.15,
+     1073.97
+    ],
+    "u": [
+     -0.6782,
+     -0.717,
+     -0.1613
+    ],
+    "roll": 122.1
+   }
+  }
+ ]
+}

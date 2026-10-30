@@ -1,0 +1,71 @@
+{
+ "bad1": {
+  "q_left": [
+   0.24,
+   -51.73,
+   26.08,
+   92.46,
+   -28.24,
+   -30.0
+  ],
+  "q_right": [
+   -15.19,
+   -75.9,
+   71.61,
+   39.98,
+   -9.03,
+   -48.96
+  ],
+  "anchor_s": 7.533,
+  "replay_unsafe": 0,
+  "arms_min_mm_replay": 55.0,
+  "vec_err_mm": 0.0,
+  "source": "pair_full_bad1.json (search over the kept span, 10-03)"
+ },
+ "d340": {
+  "q_left": [
+   0.52,
+   -55.22,
+   29.51,
+   91.59,
+   -26.3,
+   -30.0
+  ],
+  "q_right": [
+   -17.65,
+   -66.13,
+   57.98,
+   64.91,
+   -8.82,
+   -26.0
+  ],
+  "anchor_s": 22.0,
+  "replay_unsafe": 0,
+  "arms_min_mm_replay": 50.3,
+  "vec_err_mm": 0.0,
+  "source": "pair_full_d340.json (search over the kept span, 10-03)"
+ },
+ "bef5": {
+  "q_left": [
+   1.99,
+   -48.39,
+   27.82,
+   87.01,
+   -35.7,
+   -30.0
+  ],
+  "q_right": [
+   -10.95,
+   -77.76,
+   64.71,
+   52.13,
+   -5.19,
+   -46.83
+  ],
+  "anchor_s": 12.267,
+  "replay_unsafe": 0,
+  "arms_min_mm_replay": 51.1,
+  "vec_err_mm": 0.0,
+  "source": "pair_full_bef5.json (search over the kept span, 10-03)"
+ }
+}

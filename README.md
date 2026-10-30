@@ -20,7 +20,7 @@ Built for the Nebius × NVIDIA Global AI Hackathon 2026, Physical AI track.
 | dataset | LeRobot v3.0, 417 episodes, 178,068 frames at 15 fps, 256 × 256 endoscope view, 16-value state and action, 131 instruction sentences |
 | model | GR00T N1.7 (3B) fine-tuned with LeRobot 0.6.1, 20,000 steps, batch 32, on a Nebius RTX PRO 6000 VM |
 | robot evaluation | 105 closed-loop runs on two arms (35 per level from four start poses) |
-| public release | weights and data on Hugging Face; the policy server and the render API run on one Nebius Serverless Endpoint until 2026-12-15 |
+| public release | weights and data on Hugging Face; the policy server and the render API run on one Nebius Serverless Endpoint during the judging period (2026-12-08 to 2026-12-23, Pacific Time) |
 
 ## Result
 
@@ -69,8 +69,8 @@ The same renderer produces the training images and the images the policy sees on
 | dataset (LeRobot v3.0; `export_lerobot.py --layout openh` writes an Open-H-Embodiment copy) and raw hand recordings | [datasets/vincent-won/spine-il-hand90](https://huggingface.co/datasets/vincent-won/spine-il-hand90) | CC BY-NC 4.0 |
 | level meshes (L3, L4, L5, sacrum) and calibration files | with the dataset | CC BY-NC 4.0 |
 | robot runs 17 and 19 (recorded sessions, evaluation voxels, what the policy saw) for the judge checks | the dataset, `robot_runs/` | CC BY-NC 4.0 |
-| policy server (`spine-policy/1`, the fine-tuned weights above) | Nebius Serverless Endpoint until 2026-12-15 | service; build it yourself from `robot/train/nebius/serverless/` |
-| render API | the same Nebius Serverless Endpoint until 2026-12-15, limited concurrent sessions | service |
+| policy server (`spine-policy/1`, the fine-tuned weights above) | Nebius Serverless Endpoint, 2026-12-08 to 2026-12-23 (judging period) | service; build it yourself from `robot/train/nebius/serverless/` |
+| render API | the same Nebius Serverless Endpoint, 2026-12-08 to 2026-12-23 (judging period), limited concurrent sessions | service |
 
 The virtual anatomy is rendered by Altician's viewer, which stays closed source; it is offered as the hosted render API
 above, which this repository's code calls. The render server (the part of `bridge/` that runs the viewer in headless

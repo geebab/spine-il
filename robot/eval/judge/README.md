@@ -1,7 +1,7 @@
 # robot/eval/judge — checks against the hosted endpoint
 
 Small scripts (Python standard library + numpy) for the hackathon judges. They need no robot, no tracker and no local GPU:
-the policy server and the render API run on one Nebius Serverless Endpoint until 2026-12-15. Its two URLs and the bearer
+the policy server and the render API run on one Nebius Serverless Endpoint during the judging period (2026-12-08 to 2026-12-23, Pacific Time). Its two URLs and the bearer
 token are in the Devpost testing instructions.
 
 ```bash

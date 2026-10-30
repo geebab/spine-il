@@ -1,7 +1,7 @@
 # spine-render (bridge) — render API client
 
 The virtual endoscope view and the bone removal come from Altician's viewer, which is closed source. It runs as a hosted
-**render API** (a Nebius Serverless Endpoint until 2026-12-15); this package is the client side: input checks, the job and
+**render API** (a Nebius Serverless Endpoint during the judging period, 2026-12-08 to 2026-12-23); this package is the client side: input checks, the job and
 step protocol, the bearer token, and the removed-bone voxel sets used for IoU / Dice. The server itself (the viewer in
 headless Chrome) is not in this repository.
 
